@@ -1,17 +1,61 @@
+<section id="portfolio" class="site-section section-portfolio">
+    <div class="container">
+      <div class="text-center">
+        <h3>Experiencia</h3>
+        <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-xs-6 portfolio-item-container" *ngFor="let experiencia of persona.experiencias; let i = index;">
+          <div class="portfolio-item">
+            <img src="{{experiencia.imagen}}" class="img-res" alt="">
+            <div class="portfolio-item-info">
+              <h4>{{experiencia.nombreExperiencia}}</h4>
+              <a href="#" (click)="openModalExperiencia('portfolioItem2' + (i + 1), experiencia)" data-toggle="modal" [attr.data-target]="'#portfolioItem2' + (i + 1)">
+                <span class="glyphicon glyphicon-eye-open"></span>
+              </a>
+              <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+            </div><!-- /.portfolio-item-info -->
+          </div><!-- /.portfolio-item -->
+  
+          <!-- Modal -->
+          <div id="portfolioItem2{{i + 1}}" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                  <img class="img-res" src="{{experiencia.imagen}}" alt="">
+                </div>
+                <div class="modal-body">
+                  <h4 class="modal-title">{{experiencia.nombreExperiencia}}</h4>
+                  <p>{{experiencia.descripcion}}</p>
+                  <p><strong>Fecha de inicio:</strong> {{experiencia.fechaInicio}}</p>
+                  <p><strong>Fecha de fin:</strong> {{experiencia.fechaFin}}</p>
+                  <div class="modal-footer">
+                  <a href="{{ experiencia.urlPagina }}" class="btn btn-fill">Ver Página</a>
+                  </div>
+                </div>
+                
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+        </div>
+      </div>
+    </div>
+  </section><!-- /.section-portfolio -->
 <section class="site-section section-counters text-center">
     <div class="container">
         <div class="row">
             <div class="col-sm-4 col-xs-12">
-                <p class="counter start" data-to="10" data-speed="2000">0</p>
-                <h4>Years Experience</h4>
+                <p class="counter start" data-to="1" data-speed="2000">+0</p>
+                <h4>Año de experiencia</h4>
             </div>
             <div class="col-sm-4 col-xs-12">
-                <p class="counter start" data-to="120" data-speed="2000">0</p>       
-                <h4>Projects Delivered</h4>      
+                <p class="counter start" data-to="6" data-speed="2000">+0</p>       
+                <h4>Proyectos hechos</h4>      
             </div>
             <div class="col-sm-4 col-xs-12">
                 <p id="infinity" class="counter" data-from="0" data-to="1" data-speed="1000">0</p>
-                <h4>Seconds on this site!<br>What are you waiting for?</h4>
+                <h4>segundos en este sitio<br>Qué estás esperando?</h4>
             </div>
         </div>
     </div>

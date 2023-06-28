@@ -7,7 +7,9 @@
  * */
 
 /* FONT
+
 ================================================== */
+
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot?37927580');
@@ -247,6 +249,9 @@ html, body {
     font-weight: 700;
     margin: 0 0 15px;
     text-transform: uppercase;
+}
+.portfolio-item-container {
+    margin-bottom: 40px; /* Ajusta el valor según el espacio deseado */
 }
 
 .job-title {
