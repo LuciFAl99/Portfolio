@@ -1,6 +1,7 @@
 import { Habilidad } from "./habilidad";
 import { Proyecto } from "./proyecto";
 import { Experiencia } from "./experiencia";
+import { Educacion } from "./educacion";
 
 export class Persona{
     id?: number;
@@ -13,5 +14,6 @@ export class Persona{
     habilidades?: Habilidad[];
     proyectos?: Proyecto[];
     experiencias?: Experiencia[];
+    educaciones?: Educacion[];
     
 }

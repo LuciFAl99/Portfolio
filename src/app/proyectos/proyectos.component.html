@@ -28,6 +28,8 @@
                 <div class="modal-body">
                   <h4 class="modal-title">{{proyecto.nombreProyecto}}</h4>
                   <p>{{proyecto.descripcion}}</p>
+                  <p><strong>Fecha de Inicio:</strong> {{proyecto.fechaInicio}}</p>
+                  <p><strong>Fecha de Fin:</strong> {{proyecto.fechaFin}}</p>
                 </div>
                 <div class="modal-footer">
                   <ng-container *ngIf="proyecto.urlDeploy === 'Aún no se hizo el deploy'; else elseBlock">

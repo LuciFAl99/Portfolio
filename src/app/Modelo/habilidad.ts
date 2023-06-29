@@ -1,5 +1,5 @@
 export class Habilidad{
     id?:number;
     nombreHabilidad?:String;
-    nivel?:String;
+    nivel?:Number;
 }

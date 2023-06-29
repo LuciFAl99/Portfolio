@@ -1,0 +1,53 @@
+<section id="portfolio" class="site-section section-portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h3>Educación</h3>
+            <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-xs-6 portfolio-item-container"
+                *ngFor="let educacion of persona.educaciones; let i = index;">
+                <div class="portfolio-item">
+                    <img src="{{educacion.imagen}}" class="img-res" alt="">
+                    <div class="portfolio-item-info">
+                        <h4>{{educacion.nombreEducacion}}</h4>
+                        <a href="#" (click)="openModalEducacion('portfolioItem3' + (i + 1), educacion)"
+                            data-toggle="modal" [attr.data-target]="'#portfolioItem3' + (i + 1)">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+                    </div><!-- /.portfolio-item-info -->
+                </div><!-- /.portfolio-item -->
+
+                <!-- Modal -->
+                <div id="portfolioItem3{{i + 1}}" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <a class="close" data-dismiss="modal"><span
+                                        class="glyphicon glyphicon-remove"></span></a>
+                                <img class="img-res" src="{{educacion.imagen}}" alt="">
+                            </div>
+                            <div class="modal-body">
+                                <h4 class="modal-title">{{educacion.nombreEducacion}}</h4>
+                                <p>{{educacion.descripcion}}</p>
+                                <p><strong>Fecha de inicio:</strong> {{educacion.fechaInicio}}</p>
+                                <p><strong>Fecha de fin:</strong> {{educacion.fechaFin}}</p>
+                                <div class="modal-footer">
+                                    <ng-container *ngIf="educacion.certificado !== 'Aún no terminado';">
+                                        <a href="{{ educacion.certificado }}" class="btn btn-fill" target="_blank">Ver
+                                            Certificado</a>
+                                    </ng-container>
+                                    <ng-container *ngIf="educacion.establecimiento === 'Mindhub'">
+                                        <a href="https://www.credly.com/badges/dbbd410b-39d4-4f31-b2f5-689ddb299e2b/linked_in?t=rwati4" class="btn btn-fill" target="_blank">Ver Insignia</a>
+                                      </ng-container>
+                                </div>
+                            </div>
+
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div>
+        </div>
+    </div>
+</section><!-- /.section-portfolio -->

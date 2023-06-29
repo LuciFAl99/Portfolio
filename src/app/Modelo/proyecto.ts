@@ -4,5 +4,7 @@ export class Proyecto {
     descripcion?:String;
     urlRepo?:String;
     urlDeploy?:String;
-    imagen?:String
+    imagen?:String;
+    fechaInicio?:Date;
+    fechaFin?:Date;
 }

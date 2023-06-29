@@ -13,6 +13,7 @@ import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModalesComponent } from './modales/modales.component';
+import { EducacionComponent } from './educacion/educacion.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ModalesComponent } from './modales/modales.component';
     ContactoComponent,
     FooterComponent,
     ModalesComponent,
+    EducacionComponent,
   ],
   imports: [
     BrowserModule,
