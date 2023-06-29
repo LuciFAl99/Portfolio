@@ -2,7 +2,7 @@ export class Experiencia{
     id?:number;
     nombreExperiencia?:String;
     descripcion?:String;
-    compañia?:String;
+    compania?:String;
     imagen?:String;
     fechaInicio?:Date;
     fechaFin?:Date;
