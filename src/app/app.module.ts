@@ -14,6 +14,8 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModalesComponent } from './modales/modales.component';
 import { EducacionComponent } from './educacion/educacion.component';
+import { RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -30,11 +32,13 @@ import { EducacionComponent } from './educacion/educacion.component';
     FooterComponent,
     ModalesComponent,
     EducacionComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
