@@ -16,6 +16,7 @@ import { ModalesComponent } from './modales/modales.component';
 import { EducacionComponent } from './educacion/educacion.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

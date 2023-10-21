@@ -3,16 +3,16 @@
 
         <h3>Iniciar Sesión</h3>
         <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-        <form novalidate>
+        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
             <div class="row">
                 <div class="col-sm-6">
-                    <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control" placeholder="Email" required >   
+                    <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control" placeholder="Email" required [(ngModel)]="nombreUsuario">   
                 </div>
                 <div class="col-sm-6">
-                    <input type="password" id="contrasena" name="name" class="form-control mt-x-0" placeholder="Contraseña" required>
+                    <input type="password" id="contrasena" name="name" class="form-control mt-x-0" placeholder="Contraseña" required [(ngModel)]="contrasena">
                 </div>
             </div>
-            <button href="#" class="btn btn-border" type="submit">Iniciar Sesión<span class="glyphicon glyphicon-send"></span></button>
+            <button class="btn btn-border" type="submit">Iniciar Sesión<span class="glyphicon glyphicon-send"></span></button>
         </form>
     </div>
 </section><!-- /.section-form -->
